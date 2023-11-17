@@ -84,10 +84,18 @@ aside > *:last-child {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 10px 20px;
+    padding: 10px 40px;
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1;
+}
+
+#premium {
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 25px;
 }
 
 
@@ -100,6 +108,7 @@ aside > *:last-child {
 }
 
 .jukebox h2 {
+    font-weight: 500;
     color: white;
     padding: 20px 0;
 }
@@ -168,6 +177,17 @@ aside > *:last-child {
         align-items: center;
         justify-content: center;
         font-size: 50px;
+    }
+
+    .title {
+        font-weight: 400;
+        padding: 20px 0 5px;
+    }
+
+    .subtitle {
+        color: rgb(135, 135, 135);
+        font-weight: 200;
+        font-size: small;
     }
 
 

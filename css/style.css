@@ -151,7 +151,7 @@ main {
         text-align: center;
         width: calc((100% / 6) - 20px);
         min-height: 200px;
-        padding: 10px 0;
+        padding: 2px 2px;
         margin: 10px;
         
     }
@@ -161,6 +161,10 @@ main {
         justify-content: center;
         align-items: center;
         position: relative;
+    }
+
+    .card , .img-box > img , .card > .img-box > .overlay {
+        border-radius: 5px;
     }
 
     .card > .img-box > .overlay {
@@ -186,6 +190,7 @@ main {
         color: rgb(135, 135, 135);
         font-weight: 200;
         font-size: small;
+        display: inline-block;
     }
 
 
@@ -207,20 +212,25 @@ footer .container {
 .debug footer > .container > section {
     display: flex;
     align-items: center;
-    border: 1px dashed black;
-    min-width:20%;
-    height: 100%;
 }
 
 /*  LEFT FOOTER */
+
+    .left-footer {
+        min-width: 10%;
+    }
 
     .left-footer > .small-card {
         display: flex;
     }
 
     .left-footer > .small-card > .img-box {
-        width: 70px;
+        max-width: 80px;
         padding: 10px;
+    }
+
+    .left-footer > .small-card > .img-box > img {
+        border: 1px solid grey;
     }
 
     .left-footer > .small-card > .current-track {
@@ -248,7 +258,7 @@ footer .container {
 /*  CENTER FOOTER */
 
     .center-footer {
-        width: 50%;
+        min-width: 50%;
         display: flex;
         flex-direction: column;
     }
@@ -258,11 +268,11 @@ footer .container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .center-footer > .play-menu > ul {
         width: 30%;
-        border: 1px dashed red;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -288,8 +298,8 @@ footer .container {
     .time {
         font-size: small;
         width: 5%;
-        padding: 3px;
-        margin: 5px;
+        padding: 5px;
+        margin: 0 5px;
         color: rgb(135, 135, 135);
     }
 
@@ -298,11 +308,11 @@ footer .container {
         width: 100%;
         display: flex;
         align-items: center;
-        padding: 5px;
+        justify-content: space-between;
     }
 
     #trackbar {
-        width: 100%;
+        width: 80%;
         height: 3px;
         background-color: rgb(135, 135, 135);
         border-radius: 10px;
@@ -325,6 +335,39 @@ footer .container {
         display: none;
     }
 
+    /* RIGHT FOOTER */
+
+    .right-footer {
+        display: flex;
+        min-width: 15%;
+    }
+
+    .control-panel {
+        width: 100%;
+    }
+
+    .control-panel > ul {
+        display: flex;
+        width: 100%;
+    }
+
+    .control-panel > ul > li {
+        width: 5%;
+        margin: 0 10px;
+        padding: 3px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .control-panel > ul > li:last-of-type {
+        width: 100%;
+    }
+
+    .control-panel #trackbar-state > i {
+        font-size: 10px;
+    }
+
 
 
 
@@ -335,6 +378,14 @@ footer .container {
 
     .card {
         width: calc((100% / 4) - 20px);
+    }
+
+    .left-footer .title, .left-footer .title {
+        font-size: smaller;
+    }
+
+    .center-footer {
+        min-width: 30%;
     }
 }
 
@@ -358,6 +409,11 @@ footer .container {
     #wrapper > main > header {
         width: 100%;
     }
+
+    .left-footer i {
+        transform: scale(0.7);
+        padding: 0;
+    }
 }
 
 
@@ -366,9 +422,14 @@ footer .container {
     text-decoration: underline 2px #ADFF2F;
 }
 
+.card:hover {
+    background-color: #2d3543;
+}
+
 .card:hover .overlay {
     opacity: 1;
 }
+
 
 #premium:hover , #play-button i:hover {
     transform: scale(1.1);
@@ -385,7 +446,6 @@ i:hover , .subtitle:hover ,.genre > ul > li > a:hover {
 
 .container-trackbar:hover #trackbar-state {
     background-color: #ADFF2F;
-    transform: scale(1.02);
 }
 
 .container-trackbar:hover #trackbar-state > i {

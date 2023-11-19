@@ -312,7 +312,7 @@ footer .container {
     }
 
     #trackbar {
-        width: 80%;
+        width: 100%;
         height: 3px;
         background-color: rgb(135, 135, 135);
         border-radius: 10px;

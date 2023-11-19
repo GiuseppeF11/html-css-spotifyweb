@@ -38,21 +38,110 @@ img {
     color: rgb(135, 135, 135);
 }
 
-/* MAIN */
+.white-text {
+    color: white;
+}
 
 #wrapper {
     height: calc(100vh - 90px);
     display: flex;
 }
+
+h4 {
+    font-weight: 500;
+    padding: 10px 0;
+}
 /* ASIDE */
 
 aside {
-    min-width: 180px;
+    min-width: 200px;
     height: 100%;
-    background-color: aquamarine;
+    background-color: black;
     display: flex;
     flex-direction: column;
 }
+
+aside > * {
+    padding: 10px;
+}
+
+aside .logo-big {
+    width: 70%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+aside li {
+    padding: 5px 0;
+    margin: 3px 0;
+}
+
+aside > .navigation {
+    margin-bottom: 10px;
+}
+
+aside > .navigation > ul > li  i {
+    width: 20%;
+    font-size: 23px;
+}
+
+aside #playlist {
+    min-height: 20%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background: lightgrey; 
+    border-radius: 10px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+aside #playlist li {
+    padding-top: 10px;
+}
+
+aside #add-playlist {
+    display: flex;
+    align-items: center;
+}
+
+aside #add-playlist > button {
+    margin-right: 10px;
+    background-color: grey;
+    color: black;
+    border: none;
+    font-size: 20px;
+}
+
+aside #add-playlist > button > i {
+    padding: 8px 10px ;
+}
+
+aside > .account {
+    justify-self: flex-end;
+}
+
+aside > .account > hr {
+    margin: 10px 0;
+}
+
+
+aside > .account > a > i {
+    padding-right: 10px;
+}
+
+
+/*  MAIN */
 
 main {
     padding-top: 80px;
@@ -62,20 +151,11 @@ main {
     overflow: auto;
 }
 
-#playlist {
-    min-height: 20%;
-    overflow: auto;
-}
-
-#playlist > div {
-    background-color: brown;
-}
-
 
 /* MAIN HEADER */
 
 #wrapper > main > header {
-    width: calc(100% - 180px);
+    width: calc(100% - 200px);
     height: 80px;
     background-color: #262626c1;
     position: fixed;
@@ -440,7 +520,11 @@ footer .container {
     text-decoration: underline 1px white;
 }
 
-i:hover , .subtitle:hover ,.genre > ul > li > a:hover {
+i:hover ,
+.subtitle:hover ,
+.genre > ul > li > a:hover ,
+aside #add-playlist:hover span,
+aside .account a:hover {
     color: white;
 }
 
@@ -450,4 +534,19 @@ i:hover , .subtitle:hover ,.genre > ul > li > a:hover {
 
 .container-trackbar:hover #trackbar-state > i {
     display: block;
+}
+
+aside li:hover {
+    color: white;
+    border-left: 2px solid #ADFF2F;
+    padding-left: 5px;
+}
+
+aside #add-playlist:hover button {
+    background-color: lightgrey;
+    color: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

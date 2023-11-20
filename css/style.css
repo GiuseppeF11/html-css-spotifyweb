@@ -57,24 +57,19 @@ aside {
     min-width: 200px;
     height: 100%;
     background-color: black;
+    position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 aside > * {
     padding: 10px;
 }
 
-aside .logo-big {
-    width: 70%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
 aside li {
-    padding: 5px 0;
-    margin: 3px 0;
+    margin: 5px 0;
+    padding-bottom: 10px;
 }
 
 aside > .navigation {
@@ -84,11 +79,6 @@ aside > .navigation {
 aside > .navigation > ul > li  i {
     width: 20%;
     font-size: 23px;
-}
-
-aside #playlist {
-    min-height: 20%;
-    overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -105,15 +95,35 @@ aside #playlist {
     border-radius: 10px;
 }
 
-
-aside #playlist li {
-    padding-top: 10px;
-}
-
-aside #add-playlist {
+aside #playlist-container {
+    flex-grow: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
+
+aside #playlist-container ul {
+    overflow: auto;
+    flex-grow: 1;
+}
+
+
+aside #playlist-container li {
+    padding-bottom: 10px;
+}
+
+aside #playlist-container h4 {
+    height: 50px;
+}
+
+aside #playlist-container #add-playlist {
+    height: 50px;
+}
+
+aside #playlist-container ul {
+    overflow: auto;
+    flex-grow: 1;
+}
+
 
 aside #add-playlist > button {
     margin-right: 10px;
@@ -127,12 +137,29 @@ aside #add-playlist > button > i {
     padding: 8px 10px ;
 }
 
+#playlist a {
+    font-size: small;
+}
+
 aside > .account {
-    justify-self: flex-end;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside > .account a:last-of-type {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
+aside > .account a:last-of-type i {
+    font-size: 30px;
 }
 
 aside > .account > hr {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 
@@ -158,7 +185,7 @@ main {
     width: calc(100% - 200px);
     height: 80px;
     background-color: #262626c1;
-    position: fixed;
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -344,23 +371,22 @@ footer .container {
     }
 
     .center-footer > .play-menu {
-        width: 100%;
+        width: 80%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
     .center-footer > .play-menu > ul {
-        width: 30%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .center-footer > .play-menu > ul > li {
         font-size: 20px;
         padding: 3px 5px;
+        margin: 0 10px;
     }
 
     .center-footer > .play-menu > ul > li > #play-button {
@@ -377,10 +403,9 @@ footer .container {
 
     .time {
         font-size: small;
-        width: 5%;
         padding: 5px;
         margin: 0 5px;
-        color: rgb(135, 135, 135);
+        color: white;
     }
 
     .container-trackbar {
@@ -393,14 +418,14 @@ footer .container {
 
     #trackbar {
         width: 100%;
-        height: 3px;
+        height: 4px;
         background-color: rgb(135, 135, 135);
         border-radius: 10px;
     }
 
     #trackbar-state {
         width: 30%;
-        height: 3px;
+        height: 4px;
         background-color: lightgrey;
         border-radius: 10px;
         display: flex;
@@ -462,10 +487,6 @@ footer .container {
 
     .left-footer .title, .left-footer .title {
         font-size: smaller;
-    }
-
-    .center-footer {
-        min-width: 30%;
     }
 }
 

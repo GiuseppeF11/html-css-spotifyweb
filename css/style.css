@@ -61,6 +61,7 @@ aside {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 5px;
 }
 
 aside > * {
@@ -69,6 +70,10 @@ aside > * {
 
 aside li {
     margin: 10px 0;
+}
+
+aside #logo-small {
+    display: none;
 }
 
 aside > .navigation {
@@ -153,8 +158,18 @@ aside > .account {
     justify-content: center;
 }
 
+aside > .account a {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+aside > .account i {
+    padding-right:10px;
+}
+
 aside > .account a:last-of-type {
-    font-size: larger;
+    font-size: medium;
     display: flex;
     align-items: center;
 }
@@ -165,11 +180,6 @@ aside > .account a:last-of-type i {
 
 aside > .account > hr {
     margin: 5px 0;
-}
-
-
-aside > .account > a > i {
-    padding-right: 10px;
 }
 
 
@@ -354,10 +364,6 @@ footer .container {
         justify-content: center;
     }
 
-    .left-footer > .small-card > .current-track * {
-        margin: 2px 2px;
-        padding: 2px;
-    }
 
     .left-footer > .fast-command {
         display: flex;
@@ -510,18 +516,54 @@ footer .container {
         width: calc((100% / 2) - 20px);
     }
 
+    #wrapper > main > header {
+        width: calc(100% - 100px);
+    }
+    
+
     aside {
+        min-width: 100px;
+        padding: 10px;
+    }
+
+    aside #playlist-container {
         display: none;
     }
 
-    #wrapper > main > header {
-        width: 100%;
+    aside hr {
+        display: none;
+    }
+
+    aside span {
+        display: none;
+    }
+
+    aside .account {
+        display: none;
+    }
+
+    aside #logo-big {
+        display: none;
+    }
+
+    aside #logo-small {
+        display: block;
+    }
+
+    aside li {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
     }
 
     .left-footer i {
         transform: scale(0.7);
         padding: 0;
     }
+
+    
+
+
 }
 
 

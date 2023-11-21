@@ -434,6 +434,7 @@ footer .container {
         height: 4px;
         background-color: rgb(135, 135, 135);
         border-radius: 10px;
+        cursor: pointer;
     }
 
     #trackbar-state {
@@ -554,6 +555,10 @@ footer .container {
         display: flex;
         justify-content: center;
         padding: 20px;
+    }
+
+    aside > .navigation > ul > li i {
+        font-size: 40px;
     }
 
     .left-footer i {
